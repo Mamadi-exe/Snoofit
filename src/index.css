@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Snoonu Brand Colors */
+    /* Primary - Snoonu Red #D6001C */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    /* Primary - Snoonu Red */
+    --primary: 352 100% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Grey */
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent - Snoonu Red lighter */
+    --accent: 352 85% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 352 100% 42%;
+
+    --radius: 1rem;
+
+    /* Snoonu Brand Palette */
+    --snoonu-red: 352 100% 42%;
+    --snoonu-red-light: 352 85% 55%;
+    --snoonu-red-dark: 352 100% 35%;
+    --snoonu-white: 0 0% 100%;
+    --snoonu-grey-light: 0 0% 97%;
+    --snoonu-grey: 0 0% 90%;
+    --snoonu-charcoal: 0 0% 20%;
+    --snoonu-black: 0 0% 0%;
+
+    /* FitQuest Accent Colors */
+    --fitquest-orange: 24 95% 53%;
+    --fitquest-coral: 12 80% 60%;
+    --fitquest-gold: 45 93% 58%;
+    --fitquest-purple: 265 70% 55%;
+    --fitquest-blue: 230 80% 55%;
+    --fitquest-indigo: 240 70% 40%;
+    --fitquest-teal: 168 76% 42%;
+    --fitquest-green: 145 63% 42%;
+    --fitquest-pink: 330 70% 55%;
+    --fitquest-dark: 0 0% 10%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(352 100% 35%) 0%, hsl(352 100% 42%) 50%, hsl(352 85% 50%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(352 100% 42%) 0%, hsl(352 85% 55%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 93% 58%) 0%, hsl(24 95% 53%) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(230 80% 55%) 0%, hsl(265 70% 55%) 100%);
+    --gradient-green: linear-gradient(135deg, hsl(168 76% 42%) 0%, hsl(145 63% 42%) 100%);
+    --gradient-purple: linear-gradient(135deg, hsl(265 70% 55%) 0%, hsl(330 70% 55%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 15%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.08);
+    --shadow-md: 0 8px 24px -8px hsl(0 0% 0% / 0.12);
+    --shadow-lg: 0 16px 48px -16px hsl(0 0% 0% / 0.16);
+    --shadow-glow: 0 0 40px hsl(352 100% 42% / 0.3);
+    --shadow-glow-blue: 0 0 40px hsl(230 80% 55% / 0.3);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 352 100% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 97%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 352 100% 42%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 352 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 352 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 352 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-blue {
+    background: var(--gradient-blue);
+  }
+
+  .gradient-green {
+    background: var(--gradient-green);
+  }
+
+  .gradient-purple {
+    background: var(--gradient-purple);
+  }
+
+  .gradient-dark {
+    background: var(--gradient-dark);
+  }
+
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-glow-blue {
+    box-shadow: var(--shadow-glow-blue);
+  }
+
+  .glass {
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-dark {
+    background: hsl(230 30% 8% / 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(24 95% 53% / 0.4); }
+    50% { box-shadow: 0 0 40px hsl(24 95% 53% / 0.6); }
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes bounce-in {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+}
+
+/* Mapbox overrides */
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib {
+  display: none !important;
+}
+
+.mapboxgl-popup-content {
+  @apply rounded-2xl shadow-lg p-4 bg-card border-0;
+}
+
+.mapboxgl-popup-close-button {
+  @apply text-foreground text-xl p-2;
+}
