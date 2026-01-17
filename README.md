@@ -37,6 +37,7 @@ Users navigate a live map, and once they are within the designated radius of a p
 
 * **Node.js** (v18 or higher)
 * **npm** or **yarn**
+* **vite**
 
 ### Installation
 
@@ -45,6 +46,11 @@ Users navigate a live map, and once they are within the designated radius of a p
    git clone [https://github.com/Mamadi-exe/Snoofit.git](https://github.com/Mamadi-exe/Snoofit.git)
    cd snoonu-gamification
    ```
-2. **Run the app**
+2. **Install vite**
+   ```bash
+   npm i vite
+   ```
+3. **Run the app**
    ```bash
    npm run dev
+   ```
