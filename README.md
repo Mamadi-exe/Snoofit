@@ -42,7 +42,7 @@ Users navigate a live map, and once they are within the designated radius of a p
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/snoonu-gamification.git](https://github.com/yourusername/snoonu-gamification.git)
+   git clone [https://github.com/Mamadi-exe/Snoofit.git](https://github.com/Mamadi-exe/Snoofit.git)
    cd snoonu-gamification
    ```
 2. **Run the app**
